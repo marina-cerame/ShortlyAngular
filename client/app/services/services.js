@@ -8,6 +8,7 @@ angular.module('shortly.services', [])
   };
   var addOne = function(req) {
     return $http.post('/api/links', req).then(function(stuff) {
+      console.log(stuff);
       return stuff;
     });
   };
