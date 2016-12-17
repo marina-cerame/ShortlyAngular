@@ -6,8 +6,8 @@ angular.module('shortly.services', [])
       return response.data;
     });
   };
-  var addOne = function(req) {
-    return $http.post('/api/links', req).then(function(response) {
+  var addOne = function(link) {
+    return $http({method: 'POST', url: '/api/links', data: {url: link} }).then(function(response) {
       return response;
     });
   };
@@ -48,6 +48,7 @@ angular.module('shortly.services', [])
   };
 
   var isAuth = function () {
+    console.log('checking auth');
     return !!$window.localStorage.getItem('com.shortly');
   };
 

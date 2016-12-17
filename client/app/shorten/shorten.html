@@ -1,4 +1,14 @@
 <div id='container'>
 <!-- Your code here -->
-<h3>SHORTEN</h3>
+  <h3>SHORTEN</h3>
+  <form ng-submit='addLink(link.url)'>
+    <input type='url' ng-model='link.url'>
+    <button>Submit</button>
+  </form>
+
 </div>
+
+
+<pre>
+  {{ link | json}}
+</pre>

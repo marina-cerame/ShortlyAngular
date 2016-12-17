@@ -1,4 +1,16 @@
 <div id='container'>
   <!-- Your html here -->
   <h3>LINKS</h3>
+
+
+  <div class='linkHolder'>
+    <div ng-repeat="link in data.links" class='link'>
+      <img src='../assets/redirect_icon.png' />
+      <div class='title'>{{ link.title }}</div> <br />
+      <div class='original'>{{ link.url }}</div>
+      <div class='visits'>{{ link.visits }} Visits</div>
+      <a href='{{link.baseUrl}}/{{link.code}}'>{{link.baseUrl}}/{{link.code}}</a>
+    </div>
+  </div>
+
 </div>
