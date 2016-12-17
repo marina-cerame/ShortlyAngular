@@ -5,5 +5,6 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function(link) {
     console.log('THIS IS LINK', link);
     Links.addOne(link); // This... might... not work...
+    $location.path('/links');
   };
 });

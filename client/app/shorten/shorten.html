@@ -2,13 +2,8 @@
 <!-- Your code here -->
   <h3>SHORTEN</h3>
   <form ng-submit='addLink(link.url)'>
-    <input type='url' ng-model='link.url'>
+    <input type='url' ng-model='link.url' placeholder="Enter http link here">
     <button>Submit</button>
   </form>
 
 </div>
-
-
-<pre>
-  {{ link | json}}
-</pre>

@@ -1,10 +1,10 @@
 <div id='container'>
   <!-- Your html here -->
   <h3>LINKS</h3>
-
+  <input ng-model='search' placeholder='Search links'/>
 
   <div class='linkHolder'>
-    <div ng-repeat="link in data.links" class='link'>
+    <div ng-repeat="link in data.links | orderBy:'-visits' | filter: search" class='link'>
       <img src='../assets/redirect_icon.png' />
       <div class='title'>{{ link.title }}</div> <br />
       <div class='original'>{{ link.url }}</div>
