@@ -56,7 +56,7 @@ describe('Services', function () {
           title: 'Hack Reactor Labs'
         });
 
-      Links.addOne(github).then(function (resp) {
+      Links.addOne(github.url).then(function (resp) {
         expect(resp.status).to.equal(201);
         expect(resp.data.title).to.equal('Hack Reactor Labs');
       });
